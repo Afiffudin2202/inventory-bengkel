@@ -26,3 +26,9 @@ Route::get('/dashboard', function () {
 Route::get('/barang', function () {
     return view('barang');
 });
+Route::get('/pembelian', function () {
+    return view('pembelian');
+});
+Route::get('/penjualan', function () {
+    return view('penjualan');
+});

@@ -21,9 +21,9 @@
 
 
 <body>
-    <div class="container-fluid p-0 m-0 h-100 bg-login bg-gradient">
-        <div class="row p-0 m-0 h-100 ">
-            <div class="col-lg-12 col-md-12 col-sm-12 p-3 m-0 d-flex align-items-center justify-content-center ">
+    <div class="container-fluid p-0 m-0 bg-login bg-gradient" style="height: 100vh ">
+        <div class="row p-0 m-0 h-100 align-items-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 p-3 m-0 ">
                 @yield('content')
             </div>
         </div>

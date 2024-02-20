@@ -17,13 +17,13 @@
              </a>
          </li>
          <li>
-             <a href="#" class="nav-link text-white {{ request()->segment(1) == 'pembelian' ? 'active' : '' }}">
+             <a href="/pembelian" class="nav-link text-white {{ request()->segment(1) == 'pembelian' ? 'active' : '' }}">
                  <i class="bi bi-box-arrow-in-down-right"></i>
                  <span class="mx-2">Pembelian</span>
              </a>
          </li>
          <li>
-             <a href="#" class="nav-link text-white {{ request()->segment(1) == 'penjualan' ? 'active' : '' }}">
+             <a href="/penjualan" class="nav-link text-white {{ request()->segment(1) == 'penjualan' ? 'active' : '' }}">
                  <i class="bi bi-box-arrow-up-right"></i>
                  <span class="mx-2">Penjualan</span>
              </a>

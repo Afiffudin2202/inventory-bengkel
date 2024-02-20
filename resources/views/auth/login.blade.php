@@ -1,7 +1,7 @@
 @extends('auth.layout-login')
 @section('content')
     <div class="container-fluid ">
-        <div class="row justify-content-center">
+        <div class="row login">
             <div class="col-lg-4">
                 <div class="content-login">
                     <div class="card shadow-lg p-0 border-0">

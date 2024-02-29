@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BarangController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,12 +24,21 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware('auth');
 
-Route::get('/barang', function () {
-    return view('barang');
-});
+// Route::get('/barang', function () {
+//     return view('barang');
+// });
+
+// Route Barang
+Route::get('/barang', [BarangController::class, 'index'])->middleware('auth');
+Route::post('/barang/store', [BarangController::class, 'store'])->name('barang.store');
+Route::delete('/barang/{barang:kd_barang}', [BarangController::class, 'destroy']);
+Route::put('/barang/edit/{kd_barang}', [BarangController::class, 'update']);
+
 Route::get('/pembelian', function () {
     return view('pembelian');
 });
 Route::get('/penjualan', function () {
     return view('penjualan');
 });
+
+

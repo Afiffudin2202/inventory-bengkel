@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{{ asset('/') }}assets/dist/DataTables/datatables.min.css">
     <link rel="stylesheet" href="{{ asset('/') }}assets/dist/DataTables/Buttons/buttons.dataTables.css">
 
+    {{-- Sweetalert --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css">
 
 </head>
 
@@ -52,22 +54,63 @@
 
 
 <script>
-   $('#example').DataTable( {
-    // dom: 'Bfrtip',
-    // buttons: [
-    //     {
-    //         'text' : 'Red',
-    //     },
-    //     'print', 'excel', 'pdf'
-    // ],
-    // 'paginate' : true,
-    // 'search' : true,
-    'scrollCollapse': true,
-    'scroller': true,
-    'scrollY': 410
-    
-} );
+    $('#example').DataTable({
+        // dom: 'Bfrtip',
+        // buttons: [
+        //     {
+        //         'text' : 'Red',
+        //     },
+        //     'print', 'excel', 'pdf'
+        // ],
+        'paginate': true,
+        'search': true,
+        'scrollCollapse': true,
+        'scroller': true,
+        'scrollY': 410
 
+    });
+</script>
+
+{{-- Sweet Alert --}}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
+
+<script>
+    // Tampilkan SweetAlert jika ada notifikasi session 'success'
+    @if (session()->has('success'))
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: '{{ session('success') }}',
+        });
+    @endif
+
+    @if ($errors->any())
+        Swal.fire({
+            icon: 'error',
+            title: 'Gagal',
+            text: 'Periksa kembali inputan anda',
+        });
+    @endif
+
+    // confirm hapus
+    function confirm(event) {
+        event.preventDefault(); // Mencegah form di-submit secara langsung
+
+        Swal.fire({
+            title: 'Yakin Hapus?',
+            text: 'Anda tidak dapat mengembalikan ini!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Ya, hapus!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Jika pengguna mengklik "Ya", maka lanjutkan dengan mengirim form
+                document.getElementById('deleteForm').submit();
+            }
+        });
+    }
 </script>
 
 </html>

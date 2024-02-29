@@ -7,6 +7,7 @@
         <hr>
         <div class="content-card my-3 ">
             <div class="card p-5">
+                {{-- Form --}}
                 <form action="" method="post">
                     @csrf
                     <div class="row gap-5 justify-content-between px-5">
@@ -24,7 +25,7 @@
                         </div>
                     </div>
                     <div class="row gap-5 justify-content-between px-5">
-                         <div class="col-lg-4 ">
+                        <div class="col-lg-4 ">
                             <div class="mb-3">
                                 <label for="kd_supplier" class="form-label">Kode Supplier</label>
                                 <select name="kd_supplier" id="kd_supplier" class="form-select">
@@ -32,10 +33,10 @@
                                 </select>
                             </div>
                         </div>
-                         <div class="col-lg-4 ">
+                        <div class="col-lg-4 ">
                             <div class="mb-3">
                                 <label for="nama_supplier" class="form-label">Nama Supplier</label>
-                               <input type="text" class="form-control" id="nama_supplier" readonly disabled>
+                                <input type="text" class="form-control" id="nama_supplier" readonly disabled>
                             </div>
                         </div>
                     </div>
@@ -84,6 +85,28 @@
                         </div>
                     </div>
                 </form>
+            </div>
+            <div class="card p-5 mt-5">
+                {{-- Tabel --}}
+                <div class="card p-3">
+                    <table id="example" class="table display  table-bordered table-hover" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>No Pembelian</th>
+                                <th>Tanggal Pembelian</th>
+                                <th>Nama Supplier</th>
+                                <th>Nama barang</th>
+                                <th>Harga Satuan</th>
+                                <th>Jumlah Beli</th>
+                                <th>Total Harga</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+                {{-- Tabel End --}}
             </div>
         </div>
     </div>

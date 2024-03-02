@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('kd_supplier');
             $table->string('nama_supplier', 100);
             $table->string('alamat', 100);
-            $table->integer('no_hp')->nullable();
+            $table->string('no_hp')->nullable();
             $table->timestamps();
         });
     }

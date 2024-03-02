@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\SupplierController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,4 +42,8 @@ Route::get('/penjualan', function () {
     return view('penjualan');
 });
 
-
+// Route Supplier
+Route::get('/supplier', [SupplierController::class, 'index']);
+Route::post('/supplier/store', [SupplierController::class, 'store'])->name('supplier.store');
+Route::delete('/supplier/{supplier:kd_supplier}', [SupplierController::class, 'destroy']);
+Route::put('/supplier/edit/{kd_supplier}', [SupplierController::class, 'update']);

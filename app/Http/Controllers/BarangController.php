@@ -46,7 +46,6 @@ class BarangController extends Controller
     public function destroy(Barang $barang)
     {
         $barang->delete();
-
         return redirect('barang')->with('success', 'Data barang telah dihapus');
     }
 }

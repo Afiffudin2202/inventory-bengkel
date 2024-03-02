@@ -29,7 +29,7 @@
              </a>
          </li>
          <li>
-             <a href="" class="nav-link text-white {{ request()->segment(1) == 'supplier' ? 'active' : '' }}">
+             <a href="{{ url('supplier') }}" class="nav-link text-white {{ request()->segment(1) == 'supplier' ? 'active' : '' }}">
                  <i class="bi bi-person-down"></i>
                  <span class="mx-2">Supplier</span>
              </a>

@@ -30,6 +30,13 @@ class SaleController extends Controller
         // Menggabungkan 2 array
         $sale = array_merge(['no_penjualan' => $no_penjualan], $validated);
 
+        // memanggil stok barang untuk dilakukan pemotongan
+        $barangId = $request->input('barang_id');
+        $jumlah = $request->input('jumlah_jual');
+        $barang = Barang::find($barangId);
+        $barang->stok -= $jumlah;
+        $barang->save();
+
         Sale::create($sale);
 
         return redirect('penjualan')->with('success', 'Transaksi penjualan berhasil');

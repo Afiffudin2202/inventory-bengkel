@@ -1,4 +1,4 @@
-@extends('auth.layout-login')
+@extends('admin.auth.layout-login')
 @section('content')
     <div class="container-fluid ">
         <div class="row login">

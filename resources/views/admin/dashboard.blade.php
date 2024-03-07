@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('admin.layouts.main')
 @section('content')
     <div class="content-container px-3">
         <div class="header">
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3" >
                     <div class="card-dashboard ">
                         <div class="row">
                             <div class="col-lg-3  d-flex align-items-center">
@@ -89,7 +89,7 @@
         </div>
         <hr>
         <div class="content-card my-3">
-            <div class="row ">
+            <div class="row">
                 <div class="col-lg-6 mb-3">
                     <div class="card">
                         <div class="card-header">

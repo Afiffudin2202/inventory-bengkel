@@ -11,7 +11,7 @@ class SupplierController extends Controller
     {
         $supplier = Supplier::all();
 
-        return view('supplier', compact('supplier'));
+        return view('admin/supplier', compact('supplier'));
     }
 
     public function store(Request $request)

@@ -1,11 +1,11 @@
-@extends('layouts.main')
+@extends('admin.layouts.main')
 @section('content')
     <div class="content-container px-3">
         <div class="header">
-            <h3>Data Barang</h3>
+            <h3>Data Supplier</h3>
         </div>
         <hr>
-        <div class="content-barang my-3">
+        <div class="content-supplier my-3">
             {{-- button tambah --}}
             <div class="btn-tambah d-flex justify-content-end mb-3">
                 <button class="btn btn-aulia" data-bs-toggle="modal" data-bs-target="#modalTambah"><i class="bi bi-plus"></i>
@@ -16,62 +16,62 @@
             <div class="modal fade" id="modalTambah" tabindex="-1" aria-labelledby="modalTambahLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="{{ route('barang.store') }}" method="post">
+                        <form action="{{ route('supplier.store') }}" method="post">
                             @csrf
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="modalTambahLabel">Tambah barang baru</h1>
+                                <h1 class="modal-title fs-5" id="modalTambahLabel">Tambah supplier baru</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div class="col-lg-12 col-md-12 p-3">
                                     <div class="mb-3">
-                                        <label for="kd_barang" class="form-label">Kode Barang</label>
+                                        <label for="kd_supplier" class="form-label">Kode Supplier</label>
                                         <input type="text"
-                                            class="form-control @error('kd_barang')
+                                            class="form-control @error('kd_supplier')
                                             is-invalid
                                         @enderror"
-                                            id="kd_barang" name="kd_barang" value="{{ old('kd_barang') }}">
-                                        @error('kd_barang')
+                                            id="kd_supplier" name="kd_supplier" value="{{ old('kd_supplier') }}">
+                                        @error('kd_supplier')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
                                         @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <label for="nama_barang" class="form-label">Nama Barang</label>
+                                        <label for="nama_supplier" class="form-label">Nama Supplier</label>
                                         <input type="text"
-                                            class="form-control @error('nama_barang')
+                                            class="form-control @error('nama_supplier')
                                             is-invalid
                                         @enderror"
-                                            id="nama_barang" name="nama_barang" value="{{ old('nama_barang') }}">
-                                        @error('nama_barang')
+                                            id="nama_supplier" name="nama_supplier" value="{{ old('nama_supplier') }}">
+                                        @error('nama_supplier')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
                                         @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <label for="harga" class="form-label">Harga Barang</label>
+                                        <label for="no_hp" class="form-label">No HP</label>
                                         <input type="number"
-                                            class="form-control @error('harga')
+                                            class="form-control @error('no_hp')
                                             is-invalid
                                         @enderror"
-                                            id="harga" name="harga" value="{{ old('harga') }}">
-                                        @error('harga')
+                                            id="no_hp" name="no_hp" value="{{ old('no_hp') }}">
+                                        @error('no_hp')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
                                         @enderror
                                     </div>
                                     <div class="mb-3">
-                                        <label for="stok" class="form-label">Stok Barang</label>
+                                        <label for="alamat" class="form-label">Alamat</label>
                                         <input type="text"
-                                            class="form-control @error('stok')
+                                            class="form-control @error('alamat')
                                             is-invalid
                                         @enderror"
-                                            id="stok" name="stok" value="{{ old('stok') }}">
-                                        @error('stok')
+                                            id="alamat" name="alamat" value="{{ old('alamat') }}">
+                                        @error('alamat')
                                             <div class="invalid-feedback">
                                                 {{ $message }}
                                             </div>
@@ -94,26 +94,26 @@
                 <table id="example" class="table display  table-bordered table-hover" style="width:100%">
                     <thead>
                         <tr>
-                            <th>Kode Barang</th>
-                            <th>Nama Barang</th>
-                            <th>Harga</th>
-                            <th>Stok</th>
+                            <th>Kode Supplier</th>
+                            <th>Nama Supplier</th>
+                            <th>No HP</th>
+                            <th>Alamat</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($barang as $barang)
+                        @foreach ($supplier as $supplier)
                             <tr>
-                                <td>{{ $barang->kd_barang }}</td>
-                                <td>{{ $barang->nama_barang }}</td>
-                                <td>{{ $barang->harga }}</td>
-                                <td>{{ $barang->stok }}</td>
+                                <td>{{ $supplier->kd_supplier }}</td>
+                                <td>{{ $supplier->nama_supplier }}</td>
+                                <td>{{ $supplier->no_hp }}</td>
+                                <td>{{ $supplier->alamat }}</td>
                                 <td class="text-center">
                                     <div class="btn-group">
                                         <button class="btn btn-aulia rounded-0" data-bs-toggle="modal"
-                                            data-bs-target="#modalEdit{{ $barang->kd_barang }}"><i
+                                            data-bs-target="#modalEdit{{ $supplier->kd_supplier }}"><i
                                                 class="bi bi-pencil-square"></i></button>
-                                        <form id="deleteForm" action="{{ url('barang/' . $barang->kd_barang) }}"
+                                        <form id="deleteForm" action="{{ url('supplier/' . $supplier->kd_supplier) }}"
                                             method="post">
                                             @csrf
                                             @method('delete')
@@ -127,77 +127,77 @@
                             </tr>
 
                             {{-- Modal Edit  --}}
-                            <div class="modal fade" id="modalEdit{{ $barang->kd_barang }}" tabindex="-1"
+                            <div class="modal fade" id="modalEdit{{ $supplier->kd_supplier }}" tabindex="-1"
                                 aria-labelledby="modalEditLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <form id="editForm" action="{{ url('barang/edit/' . $barang->kd_barang) }}"
+                                        <form id="editForm" action="{{ url('supplier/edit/' . $supplier->kd_supplier) }}"
                                             method="post">
                                             @csrf
                                             @method('put')
                                             {{-- Modal --}}
                                             <div class="modal-header">
                                                 <h1 class="modal-title fs-5" id="modalTambahLabel">Edit
-                                                    barang </h1>
+                                                    supplier </h1>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                                 <div class="col-lg-12 col-md-12 p-3">
                                                     <div class="mb-3">
-                                                        <label for="kd_barang" class="form-label">Kode
-                                                            Barang</label>
+                                                        <label for="kd_supplier" class="form-label">Kode
+                                                            supplier</label>
                                                         <input type="text"
-                                                            class="form-control @error('kd_barang')
+                                                            class="form-control @error('kd_supplier')
                                                             is-invalid
                                                         @enderror"
-                                                            id="kd_barang" name="kd_barang"
-                                                            value="{{ old('kd_barang', $barang->kd_barang) }}">
-                                                        @error('kd_barang')
+                                                            id="kd_supplier" name="kd_supplier"
+                                                            value="{{ old('kd_supplier', $supplier->kd_supplier) }}">
+                                                        @error('kd_supplier')
                                                             <div class="invalid-feedback">
                                                                 {{ $message }}
                                                             </div>
                                                         @enderror
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="nama_barang" class="form-label">Nama
-                                                            Barang</label>
+                                                        <label for="nama_supplier" class="form-label">Nama
+                                                            supplier</label>
                                                         <input type="text"
-                                                            class="form-control @error('nama_barang')
+                                                            class="form-control @error('nama_supplier')
                                                             is-invalid
                                                         @enderror"
-                                                            id="nama_barang" name="nama_barang"
-                                                            value="{{ old('nama_barang', $barang->nama_barang) }}">
-                                                        @error('nama_barang')
+                                                            id="nama_supplier" name="nama_supplier"
+                                                            value="{{ old('nama_supplier', $supplier->nama_supplier) }}">
+                                                        @error('nama_supplier')
                                                             <div class="invalid-feedback">
                                                                 {{ $message }}
                                                             </div>
                                                         @enderror
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="harga" class="form-label">Harga
-                                                            Barang</label>
+                                                        <label for="no_hp" class="form-label">No HP
+                                                            </label>
                                                         <input type="number"
-                                                            class="form-control @error('harga')
+                                                            class="form-control @error('no_hp')
                                                             is-invalid
                                                         @enderror"
-                                                            id="harga" name="harga"
-                                                            value="{{ old('harga', $barang->harga) }}">
-                                                        @error('harga')
+                                                            id="no_hp" name="no_hp"
+                                                            value="{{ old('no_hp', $supplier->no_hp) }}">
+                                                        @error('no_hp')
                                                             <div class="invalid-feedback">
                                                                 {{ $message }}
                                                             </div>
                                                         @enderror
                                                     </div>
                                                     <div class="mb-3">
-                                                        <label for="stok" class="form-label">Stok
-                                                            Barang</label>
+                                                        <label for="alamat" class="form-label">Alamat
+                                                            supplier</label>
                                                         <input type="text"
-                                                            class="form-control @error('stok')
+                                                            class="form-control @error('alamat')
                                                             is-invalid
                                                         @enderror"
-                                                            id="stok" name="stok"
-                                                            value="{{ old('stok', $barang->stok) }}">
+                                                            id="alamat" name="alamat"
+                                                            value="{{ old('alamat', $supplier->alamat) }}">
                                                     </div>
                                                 </div>
 
@@ -218,7 +218,7 @@
                     </tbody>
                 </table>
             </div>
-            {{-- Tabel Barang End --}}
+            {{-- Tabel supplier End --}}
 
         </div>
     </div>

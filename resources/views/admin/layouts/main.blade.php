@@ -28,8 +28,8 @@
 <body>
     <div class="container-fluid p-0 m-0 ">
         <div class="row p-0 m-0 ">
-            <div class="col-lg-2 col-md-3 p-0 m-0 aside">
-                @include('aside.aside')
+            <div class="col-lg-2 col-md-3 col-sm-0 p-0 m-0 aside">
+                @include('admin.aside.aside')
             </div>
             <div class="col-lg-10 col-md-9 col-sm-12 p-3 m-0">
                 @yield('content')
@@ -43,6 +43,9 @@
 <script src="{{ asset('/') }}assets/dist/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="{{ asset('/') }}assets/dist/bootstrap/js/sidebars.js"></script>
 
+{{-- Jquery --}}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 {{-- dataTables --}}
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="{{ asset('/') }}assets/dist/DataTables/datatables.js"></script>
@@ -52,7 +55,7 @@
 
 
 
-
+{{-- Data Tables Code--}}
 <script>
     $('#example').DataTable({
         // dom: 'Bfrtip',
@@ -73,6 +76,8 @@
 
 {{-- Sweet Alert --}}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js"></script>
+
+
 
 <script>
     // Tampilkan SweetAlert jika ada notifikasi session 'success'

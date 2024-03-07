@@ -10,7 +10,7 @@ class AuthController extends Controller
 {
     public function index()
     {
-        return view('auth.login');
+        return view('admin.auth.login');
     }
 
     public function login(Request $request)
@@ -23,7 +23,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('dashboard');
+            return redirect()->intended('/dashboard');
         }
 
         // Jika autentikasi gagal

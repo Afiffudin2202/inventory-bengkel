@@ -1,10 +1,10 @@
 <section id="footer">
     <div class="container-fluid m-0 p-0">
-        <div class="wave">
+        <div class="wave" data-aos="fade-up" data-aos-duration="3000">
         </div>
-        <div class="footer-content  pt-3">
+        <div class="footer-content  pt-3" data-aos="fade-up" data-aos-duration="1000">
             <div class="row justify-content-center">
-                <div class="col-lg-6 col-sm-12">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <h3>Hubungi Kami dan Dapatkan Layanan Terbaik</h3>
                     <div class="sosial-media">
                         <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -19,7 +19,7 @@
                             </svg> Aulia Motor</a>
                     </div>
                 </div>
-                <div class="col-lg-6 col-sm-12">
+                <div class="col-lg-6  col-md-6 col-sm-12">
                     <h3>Alamat</h3>
                     <div class="maps">
                     </div>
@@ -27,7 +27,7 @@
             </div>
             <hr>
             <div class="copyright">
-                        Copyright &copy; 2024 Aulia Motors
+                Copyright &copy; 2024 Aulia Motors
             </div>
         </div>
     </div>

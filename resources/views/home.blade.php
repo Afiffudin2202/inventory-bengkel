@@ -45,17 +45,20 @@
                     motor anda tetap beroprasi dengan optimal</p>
             </div>
             <div class="row card-layanan px-5 py-3 d-flex justify-content-evenly ">
-                <div class="col-lg-3 col-md-3 col-sm-12 mb-3 p-3 layanan-kami-card">
+                <div class="col-lg-3 col-md-3 col-sm-12 mb-3 p-3 layanan-kami-card" data-aos="fade-up"
+                    data-aos-duration="3000">
                     <h4>Servis Berkala</h4>
                     <p>Perawatan rutin untuk menjaga performa mesin dan komponen kedaraan</p>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 mb-3 p-3 layanan-kami-card">
+                <div class="col-lg-3 col-md-3 col-sm-12 mb-3 p-3 layanan-kami-card" data-aos="fade-up"
+                    data-aos-duration="3000">
 
                     <h4>Perbaikan Mesin</h4>
                     <p>Solusi tepat dan efisien untuk masalah mesin dan sistem kelistrikan</p>
 
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 mb-3 p-3 layanan-kami-card">
+                <div class="col-lg-3 col-md-3 col-sm-12 mb-3 p-3 layanan-kami-card" data-aos="fade-up"
+                    data-aos-duration="3000">
                     <h4>Pemasangan Aksesoris</h4>
                     <p>Tambahkan sentuhan personal pada motor anda dengan aksesoris berkualitas</p>
                 </div>
@@ -70,17 +73,20 @@
             <div class="content-pelayanan text-white">
                 <div class="row m-0 justify-content-center">
                     <div class="col-lg-6 col-md-6 col-sm-12 judul-pelayanan">
-                                <h1 >Pelayanan Terbaik Kami</h1>
+                        <h1>Pelayanan Terbaik Kami</h1>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="row m-0 justify-content-center">
-                            <div class="card-pelayanan col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3 ">
+                            <div class="card-pelayanan col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3" data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                 <img src="{{ asset('assets/images/motor2.png') }}" alt="">
                             </div>
-                            <div class="card-pelayanan col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3 ">
+                            <div class="card-pelayanan col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3 " data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic" data-aos-duration="4000">
                                 <img src="{{ asset('assets/images/motor3.png') }}" alt="">
                             </div>
-                            <div class="card-pelayanan col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3 ">
+                            <div class="card-pelayanan col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-3 " data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic" data-aos-duration="6000">
                                 <img src="{{ asset('assets/images/cb1.png') }}" alt="">
                             </div>
                         </div>
@@ -102,23 +108,23 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="row justify-content center text-center px-5">
-                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri">
+                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri" data-aos="fade-right">
                             <img src="{{ asset('assets/images/motor2.png') }}" alt="">
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12  gambar-galeri">
-                             <img src="{{ asset('assets/images/motor2.png') }}" alt="">
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri">
-                             <img src="{{ asset('assets/images/motor2.png') }}" alt="">
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri">
+                        <div class="col-lg-4 col-md-6 col-sm-12  gambar-galeri" data-aos="fade-left">
                             <img src="{{ asset('assets/images/motor2.png') }}" alt="">
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri">
-                             <img src="{{ asset('assets/images/motor2.png') }}" alt="">
+                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri" data-aos="fade-right">
+                            <img src="{{ asset('assets/images/motor2.png') }}" alt="">
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri">
-                             <img src="{{ asset('assets/images/motor2.png') }}" alt="">
+                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri" data-aos="fade-left">
+                            <img src="{{ asset('assets/images/motor2.png') }}" alt="">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri" data-aos="fade-right">
+                            <img src="{{ asset('assets/images/motor2.png') }}" alt="">
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri" data-aos="fade-left">
+                            <img src="{{ asset('assets/images/motor2.png') }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -130,5 +136,5 @@
             </div>
         </div>
     </section>
-    {{-- Galeri  End--}}
+    {{-- Galeri  End --}}
 @endsection

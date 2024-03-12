@@ -10,11 +10,10 @@
 
 
     <!-- Bootstrap -->
- 
+
     <link rel="stylesheet" href="{{ asset('/') }}assets/dist/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('/') }}assets/dist/bootstrap/css/sidebars.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-   
 
     <!-- Style.css -->
     <link rel="stylesheet" href="{{ asset('/') }}assets/dist/home.css">
@@ -25,11 +24,10 @@
 
     {{-- Sweetalert --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css">
-  <style>
-        .background-image {
-            background-image: url("{{ 'assets/images/bg-pelayanan.png' }}");
-        }
-    </style>
+
+    {{-- Data Aos --}}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -60,7 +58,11 @@
 {{-- btn dataTbles --}}
 <script src="{{ asset('/') }}assets/dist/DataTables/Buttons/js/buttons.bootstrap5.js"></script>
 
-
+{{-- data aos --}}
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 {{-- Data Tables Code --}}
 {{-- <script>

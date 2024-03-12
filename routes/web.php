@@ -46,3 +46,10 @@ Route::post('/pembelian/store', [OrderController::class, 'order']);
 // Penjualan
 Route::get('/penjualan', [SaleController::class, 'index']);
 Route::post('/penjualan/transaksi', [SaleController::class, 'transaksiJual']);
+
+
+
+// landing Page
+Route::get('auliamotors', function(){
+    return view('home');
+});

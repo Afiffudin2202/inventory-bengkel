@@ -22,6 +22,7 @@
                 <div class="col-lg-6  col-md-6 col-sm-12">
                     <h3>Alamat</h3>
                     <div class="maps">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d247.6435367726494!2d107.8045964!3d-6.7336248!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69270c85b4676d%3A0x2fe28a960cb0458e!2sAulia%20Motor%C2%B4s!5e0!3m2!1sid!2sid!4v1710340436728!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>

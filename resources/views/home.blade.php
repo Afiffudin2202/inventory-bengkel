@@ -108,24 +108,12 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="row justify-content center text-center px-5">
-                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri" data-aos="fade-right">
-                            <img src="{{ asset('assets/images/motor2.png') }}" alt="">
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12  gambar-galeri" data-aos="fade-left">
-                            <img src="{{ asset('assets/images/motor2.png') }}" alt="">
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri" data-aos="fade-right">
-                            <img src="{{ asset('assets/images/motor2.png') }}" alt="">
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri" data-aos="fade-left">
-                            <img src="{{ asset('assets/images/motor2.png') }}" alt="">
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri" data-aos="fade-right">
-                            <img src="{{ asset('assets/images/motor2.png') }}" alt="">
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri" data-aos="fade-left">
-                            <img src="{{ asset('assets/images/motor2.png') }}" alt="">
-                        </div>
+                        @foreach ($galeri as $galeri)
+                            <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri" data-aos="fade-right">
+                                <img src="{{ asset('storage/' . $galeri->gambar) }}" width="400px" height="400px"
+                                    alt="" class="my-3">
+                            </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col-lg-12 text-center my-1">

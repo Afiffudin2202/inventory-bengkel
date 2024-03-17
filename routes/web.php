@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\SaleController;
 use App\Http\Controllers\SupplierController;
@@ -47,9 +49,10 @@ Route::post('/pembelian/store', [OrderController::class, 'order']);
 Route::get('/penjualan', [SaleController::class, 'index']);
 Route::post('/penjualan/transaksi', [SaleController::class, 'transaksiJual']);
 
+// Galeri
+Route::get('/galeri', [GaleriController::class, 'index']);
+Route::get('/galeri/{id}', [GaleriController::class, 'show']);
+Route::post('galeri/store', [GaleriController::class, 'store']);
 
 
-// landing Page
-Route::get('auliamotors', function(){
-    return view('home');
-});
+Route::get('auliamotors', [HomeController::class, 'index']);

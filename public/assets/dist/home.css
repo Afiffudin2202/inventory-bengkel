@@ -1,0 +1,369 @@
+.navbar-brand {
+    font-weight: 800;
+    padding-right: 20px;
+}
+
+.container-carousel {
+    position: relative;
+}
+
+.carousel-item {
+    height: 100vh;
+}
+
+.carousel-item img {
+    height: 100%;
+}
+
+
+/* Hero */
+#hero {
+    margin-top: 50px;
+}
+
+.transparan-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 5, 5, 0.638);
+    z-index: 1;
+}
+
+.carousel-caption {
+    width: 70%;
+    top: 40%;
+    left: 15%;
+    text-align: left;
+    color: #fff;
+    z-index: 2;
+    font-size: 14px;
+}
+
+
+/* layanan kami */
+
+#layanan-kami p {
+    color: #656363;
+}
+
+#layanan-kami .card {
+    background-color: #EFEEEE;
+    border: none;
+}
+
+.judul-layanan h1,
+h3 {
+    font-weight: 500;
+}
+
+.layanan-kami-card {
+    background-color: #EFEEEE;
+    border: none;
+    border-radius: 0px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.layanan-kami-card:hover {
+    background-color: #efeeeeaa;
+    transform: scale(1.1);
+}
+
+/* layanan kami end*/
+
+/* Pelayanan */
+.container-pelayanan {
+    position: relative;
+    width: 100%;
+    background-image: url('../images/bg-pelayanan.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+
+.container-pelayanan::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, 0.507);
+}
+
+.card-pelayanan {
+    width: 180px;
+    height: auto;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #EFEEEE;
+    cursor: pointer;
+    z-index: 3;
+    padding: 0;
+}
+
+.card-pelayanan img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-pelayanan:hover img {
+    transform: scale(1.1);
+}
+
+.judul-pelayanan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 3;
+    text-align: center;
+}
+
+.gambar-galeri {
+    width: 50%;
+    height: auto;
+   
+    margin-bottom: 20px;
+}
+
+.gambar-galeri img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.gambar-galeri:hover img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.copyright {
+    text-align: center;
+}
+
+ #footer {
+     width: 100%;
+ }
+
+ .wave {
+     width: 100%;
+     height: 100px;
+     background-image: url('../images/wave1.png');
+     background-repeat: no-repeat;
+     background-size: cover;
+     margin: 0;
+     padding: 0;
+ }
+
+ .footer-content {
+     width: 100%;
+     height: 400px;
+     margin: 0;
+     background-color: #252525;
+     padding: 30px 50px;
+     font-weight: 400;
+     color: #fff;
+ }
+ .sosial-media a {
+     display: block;
+     font-size: 16px;
+     color: #fff;
+     text-decoration: none;
+     margin-bottom: 10px;
+ }
+
+ .maps {
+    margin-top: 10px;
+     width: 100%;
+     height: 100px;
+     background-color: #EFEEEE;
+ }
+
+ .copyright {
+     text-align: center;
+ }
+
+
+/* Pelayanan end */
+@media (min-width:992px) {
+
+    /* Navbar */
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        border-bottom: 3px solid #fff;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 1px;
+        margin-bottom: -3px;
+    }
+
+    /* Hero */
+    #hero {
+        margin-top: 50px;
+    }
+
+    .transparan-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(5, 5, 5, 0.638);
+        z-index: 1;
+    }
+
+    .carousel-caption {
+        width: 30%;
+        top: 40%;
+        left: 15%;
+        text-align: left;
+        color: #fff;
+        z-index: 2;
+        font-size: 18px;
+    }
+
+    .card-layanan {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    /* Pelayanan */
+    .container-pelayanan {
+        position: relative;
+        height: 500px;
+        width: 100%;
+        background-image: url('../images/bg-pelayanan.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+    }
+
+    .container-pelayanan::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 1, 1, 0.507);
+    }
+
+    .content-pelayanan {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .judul-pelayanan {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        z-index: 3;
+    }
+
+    .judul-pelayanan h1 {
+        width: 50%;
+    }
+
+    .card-pelayanan {
+        width: 250px;
+        height: auto;
+        margin: 0 10px;
+        cursor: pointer;
+        background-color: #EFEEEE;
+        cursor: pointer;
+        z-index: 3;
+        padding: 0;
+    }
+
+
+    .layanan-kami-card {
+        background-color: #EFEEEE;
+        border: none;
+        border-radius: 0px;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .layanan-kami-card:hover {
+        background-color: #efeeeeaa;
+        transform: scale(1.1);
+    }
+
+    .judul-layanan {
+        width: 50%;
+        margin: auto;
+    }
+
+    /* Galeri */
+    .gambar-galeri {
+        width: 400px;
+        height: auto;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .gambar-galeri img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s ease-in-out;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    .gambar-galeri:hover img {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    #footer {
+        width: 100%;
+    }
+
+    .wave {
+        height: 200px;
+        width: 100%;
+        background-image: url('../images/wave1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .footer-content {
+        width: 100%;
+        height: 350px;
+        background-color: #252525;
+        padding: 30px 50px;
+        font-weight: 400;
+        color: #fff;
+    }
+
+
+    .sosial-media a {
+        display: block;
+        font-size: 16px;
+        color: #fff;
+        text-decoration: none;
+        margin-bottom: 10px;
+    }
+
+    .maps {
+        width: 500px;
+        height: 200px;
+        background-color: #EFEEEE;
+    }
+
+    .copyright {
+        text-align: right;
+    }
+
+}

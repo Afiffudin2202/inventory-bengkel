@@ -40,6 +40,12 @@
                  <span class="mx-2">Customers</span>
              </a>
          </li>
+         <li>
+             <a href="{{ url('/galeri') }}" class="nav-link text-white {{ request()->segment(1) == 'galeri' ? 'active' : '' }}">
+                 <i class="bi bi-people-fill"></i>
+                 <span class="mx-2">Galeri</span>
+             </a>
+         </li>
      </ul>
      <hr>
      <div class="dropdown px-3">

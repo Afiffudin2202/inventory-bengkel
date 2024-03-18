@@ -8,10 +8,12 @@
          <div class="collapse navbar-collapse" id="navbarAulia">
              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                  <li class="nav-item">
-                     <a href="" class="nav-link active">Home</a>
+                     <a href="{{ url('auliamotors') }}"
+                         class="nav-link {{ request()->segment(1) == 'auliamotors' && request()->segment('2') == '' ? 'active' : '' }}">Home</a>
                  </li>
                  <li class="navbar-item">
-                     <a href="" class="nav-link">Services</a>
+                     <a href="{{ url('auliamotors/services') }}"
+                         class="nav-link {{ request()->segment(1) == 'auliamotors' && request()->segment(2) == 'services' ? 'active' : '' }}">Services</a>
                  </li>
                  <li class="navbar-item">
                      <a href="" class="nav-link">Onderdil</a>

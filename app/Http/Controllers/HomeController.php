@@ -15,18 +15,21 @@ class HomeController extends Controller
 
     public function services()
     {
-        $galeri = Galeri::with('kategori')->get();
-        foreach ($galeri as $galeri) {
-          
-        }
-        $galeri = $galeri->kategori->nama_kategori;
+        $galeri = Galeri::with('kategori')->where('kategori_id', 3)->get();
+       
         return view('services', compact('galeri'));
     }
-    public function servicesKategori($kategory_id = null)
+
+    public function servicesMotor()
     {
-        if ($kategory_id == null) {
-            $kategori_id = 'servis';
-        }
-        return view('services', compact('kategory'));
+        $galeri = Galeri::with('kategori')->where('kategori_id', 3)->get();
+        // dd($galeri);
+        return view('services', compact('galeri'));
+    }
+    public function servicesSteam()
+    {
+        $galeri = Galeri::with('kategori')->where('kategori_id', 2)->get();
+        // dd($galeri);
+        return view('services', compact('galeri'));
     }
 }

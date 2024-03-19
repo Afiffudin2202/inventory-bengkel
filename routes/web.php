@@ -57,4 +57,5 @@ Route::post('galeri/store', [GaleriController::class, 'store']);
 
 Route::get('auliamotors', [HomeController::class, 'index']);
 Route::get('auliamotors/services', [HomeController::class, 'services']);
-Route::get('auliamotors/services/{kategori_id?}', [HomeController::class, 'servicesKategori']);
+Route::get('auliamotors/services/motor', [HomeController::class, 'servicesMotor']);
+Route::get('auliamotors/services/steam', [HomeController::class, 'servicesSteam']);

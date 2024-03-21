@@ -188,6 +188,11 @@ h3 {
     text-align: center;
 }
 
+/* services */
+.deskripsi-services p {
+    text-align: justify;
+}
+
 
 /* Pelayanan end */
 @media (min-width:992px) {
@@ -380,5 +385,9 @@ h3 {
     .menu-services .nav-link {
         color: #252525;
         font-weight: 700;
+    }
+
+    .deskripsi-services p {
+        text-align: center;
     }
 }

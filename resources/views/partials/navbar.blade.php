@@ -13,14 +13,18 @@
                  </li>
                  <li class="navbar-item">
                      <a href="{{ url('auliamotors/services') }}"
-                         class="nav-link {{ request()->segment(1) == 'auliamotors' && request()->segment(2) == 'services' ? 'active' : '' }}">Services</a>
+                         class="nav-link {{ request()->segment(1) == 'auliamotors' && request()->segment(2) == 'services' ? 'active' : '' }}">Pelayanan</a>
                  </li>
                  <li class="navbar-item">
-                     <a href="" class="nav-link">Onderdil</a>
+                     <a href="{{ url('auliamotors/customers') }}" class="nav-link {{ request()->segment(2) == 'customers' ? 'active' : '' }}">Pelanggan</a>
                  </li>
-                 <div class="navbar-item">
-                     <a href="" class="nav-link">Steam</a>
-                 </div>
+                 <li class="navbar-item">
+                     <a href="" class="nav-link">Tentang</a>
+                 </li>
+                 <li class="navbar-item">
+                     <a href="" class="nav-link">Kontak</a>
+                 </li>
+                 
              </ul>
          </div>
      </div>

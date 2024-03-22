@@ -66,3 +66,7 @@ Route::get('auliamotors/services/modifikasi', [HomeController::class, 'servicesM
 Route::get('auliamotors/customers', function() {
     return view('customers');
 });
+
+Route::get('auliamotors/contacts', function() {
+    return view('contact');
+});

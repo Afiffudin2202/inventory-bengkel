@@ -22,7 +22,7 @@
                      <a href="" class="nav-link">Tentang</a>
                  </li>
                  <li class="navbar-item">
-                     <a href="" class="nav-link">Kontak</a>
+                     <a href="{{ url('auliamotors/contacts') }}" class="nav-link {{ request()->segment(2) == 'contacts' ? 'active' : '' }}">Kontak</a>
                  </li>
                  
              </ul>

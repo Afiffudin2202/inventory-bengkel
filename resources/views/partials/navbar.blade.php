@@ -1,4 +1,4 @@
- <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" data-bs-theme="dark">
+ <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top " data-bs-theme="dark">
      <div class="container">
          <a href="" class="navbar-brand">Aulia Motors</a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAulia"
@@ -9,7 +9,7 @@
              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                  <li class="nav-item">
                      <a href="{{ url('auliamotors') }}"
-                         class="nav-link {{ request()->segment(1) == 'auliamotors' && request()->segment('2') == '' ? 'active' : '' }}">Home</a>
+                         class="nav-link {{ request()->segment(1) == 'auliamotors' || request()->segment(1) == '' && request()->segment('2') == '' ? 'active' : '' }}">Home</a>
                  </li>
                  <li class="navbar-item">
                      <a href="{{ url('auliamotors/services') }}"
@@ -19,7 +19,7 @@
                      <a href="{{ url('auliamotors/customers') }}" class="nav-link {{ request()->segment(2) == 'customers' ? 'active' : '' }}">Pelanggan</a>
                  </li>
                  <li class="navbar-item">
-                     <a href="" class="nav-link">Tentang</a>
+                     <a href="{{ url('auliamotors/galeri') }}" class="nav-link {{ request()->segment('2') == 'galeri' ? 'active' : '' }}">Galeri</a>
                  </li>
                  <li class="navbar-item">
                      <a href="{{ url('auliamotors/contacts') }}" class="nav-link {{ request()->segment(2) == 'contacts' ? 'active' : '' }}">Kontak</a>

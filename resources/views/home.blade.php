@@ -110,14 +110,13 @@
                     <div class="row justify-content center text-center px-5">
                         @foreach ($galeri as $galeri)
                             <div class="col-lg-4 col-md-6 col-sm-12 gambar-galeri" data-aos="fade-right">
-                                <img src="{{ asset('storage/' . $galeri->gambar) }}" width="400px" height="400px"
-                                    alt="" class="my-3">
+                                <img src="{{ asset('storage/' . $galeri->gambar) }}" alt="" class="my-3">
                             </div>
                         @endforeach
                     </div>
                 </div>
                 <div class="col-lg-12 text-center my-1">
-                    <button class="btn btn-dark">
+                    <button class="btn btn-dark" onclick="window.location='{{ url('auliamotors/galeri') }}'">
                         Lihat Selengkapnya
                     </button>
                 </div>

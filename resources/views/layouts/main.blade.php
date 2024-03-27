@@ -88,7 +88,7 @@
 
 
 
-{{-- <script>
+<script>
     // Tampilkan SweetAlert jika ada notifikasi session 'success'
     @if (session()->has('success'))
         Swal.fire({
@@ -125,6 +125,6 @@
             }
         });
     }
-</script> --}}
+</script>
 
 </html>

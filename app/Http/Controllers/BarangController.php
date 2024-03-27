@@ -27,7 +27,7 @@ class BarangController extends Controller
 
         Barang::create($validated);
 
-        return redirect('/barang')->with('success', 'Data baru berhasil ditambahkan');
+        return redirect('admin/barang')->with('success', 'Data baru berhasil ditambahkan');
     }
 
     public function update(Request $request, $kd_barang)
@@ -40,12 +40,12 @@ class BarangController extends Controller
         ]);
         $barang->update($validated);
 
-        return redirect('/barang')->with('success', 'Berhasil edit barang');
+        return redirect('admin/barang')->with('success', 'Berhasil edit barang');
     }
 
     public function destroy(Barang $barang)
     {
         $barang->delete();
-        return redirect('barang')->with('success', 'Data barang telah dihapus');
+        return redirect('admin/barang')->with('success', 'Data barang telah dihapus');
     }
 }

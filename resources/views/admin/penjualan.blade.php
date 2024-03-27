@@ -7,7 +7,7 @@
         <hr>
         <div class="content my-3 ">
             <div class="card p-5">
-                <form action="{{ url('penjualan/transaksi') }}" method="post">
+                <form action="{{ url('/admin/penjualan/transaksi') }}" method="post">
                     @csrf
                     <div class="row gap-5 justify-content-between px-5">
                         {{-- <div class="col-lg-4 ">

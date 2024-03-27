@@ -36,6 +36,6 @@ class GaleriController extends Controller
 
         Galeri::create($validated);
 
-        return redirect('/galeri')->with('success', 'Galeri baru berhasil di tambah');
+        return redirect('admin/galeri')->with('success', 'Galeri baru berhasil di tambah');
     }
 }

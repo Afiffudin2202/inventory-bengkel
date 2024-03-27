@@ -122,14 +122,14 @@ h3 {
 }
 
 .gambar-galeri {
-    width: 50%;
-    height: auto;
+    width: 100%;
+    height: 140px;
     margin-bottom: 20px;
 }
 
 .gambar-galeri img {
     width: 100%;
-    height: auto;
+    height: 100%;
     transition: transform 0.5s ease-in-out;
     cursor: pointer;
     opacity: 0.8;
@@ -225,9 +225,13 @@ h3 {
     background-color: #efeeeeaa;
 }
 
-.kolom-pelanggan p,
-span {
-    color: #656363;
+.kolom-pelanggan p, .kolom-pelanggan span {
+    color: #252525;
+}
+
+.penilaian-input p {
+    text-align: center;
+    color: #252525;
 }
 
 /* kontak */
@@ -250,8 +254,27 @@ span {
     margin: 2px 5px;
 }
 
+/* halaman galeri */
+.gambar-galeri-2 {
+    width: 30%;
+    height: 150px;
+    margin-bottom: 20px;
+}
 
-/* Pelayanan end */
+.gambar-galeri-2 img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.gambar-galeri-2:hover img {
+    opacity: 1;
+}
+/* halaman galeri end */
+
+
+
 @media (min-width:992px) {
 
     /* Navbar */
@@ -378,7 +401,7 @@ span {
 
     .gambar-galeri img {
         width: 100%;
-        height: auto;
+        height: 300px;
         transition: transform 0.5s ease-in-out;
         cursor: pointer;
         opacity: 0.8;
@@ -465,5 +488,23 @@ span {
     .data-alamat {
         width: 50%;
         padding: 50px;
+    }
+
+    /* halaman galeri */
+    .gambar-galeri-2 {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .gambar-galeri-2 img {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    .gambar-galeri-2:hover img {
+        opacity: 1;
     }
 }

@@ -41,4 +41,10 @@ class HomeController extends Controller
         // dd($galeri);
         return view('services', compact('galeri', 'deskripsi'));
     }
+
+    public function galeri(){
+        $galeri = Galeri::with('kategori')->latest()->get();
+        
+        return view('galeri', compact('galeri'));
+    }
 }

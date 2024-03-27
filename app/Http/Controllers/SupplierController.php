@@ -27,7 +27,7 @@ class SupplierController extends Controller
 
         Supplier::create($validated);
 
-        return redirect('supplier')->with('success', 'Berhasil menambah Supplier');
+        return redirect('admin/supplier')->with('success', 'Berhasil menambah Supplier');
     }
 
     public function update(Request $request, $kd_supplier)
@@ -45,13 +45,13 @@ class SupplierController extends Controller
 
         $supplier->update($validated);
 
-        return redirect('/supplier')->with('success', 'Berhasil mengedit supplier');
+        return redirect('admin/supplier')->with('success', 'Berhasil mengedit supplier');
     }
 
     public function destroy(Supplier $supplier)
     {
         $supplier->delete();
 
-        return redirect('/supplier')->with('success', 'Supplier berhasil dihapus');
+        return redirect('admin/supplier')->with('success', 'Supplier berhasil dihapus');
     }
 }

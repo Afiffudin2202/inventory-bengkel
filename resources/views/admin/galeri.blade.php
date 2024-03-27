@@ -16,7 +16,7 @@
             <div class="modal fade" id="modalTambah" tabindex="-1" aria-labelledby="modalTambahLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <form action="{{ url('galeri/store') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ url('/admin/galeri/store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-header">
                                 <h1 class="modal-title fs-5" id="modalTambahLabel">Tambah galeri baru</h1>
@@ -99,11 +99,11 @@
                                 <td>{{ $galeri->kategori->nama_kategori }}</td>
                                 <td class="text-center">
                                     <div class="btn-group">
-                                       <a href="{{ url('galeri/'. $galeri->id ) }}" class="btn btn-aulia rounded-0"><i class="bi bi-eye"></i></a>
+                                       <a href="{{ url('/admin/galeri/'. $galeri->id ) }}" class="btn btn-aulia rounded-0"><i class="bi bi-eye"></i></a>
                                         <button class="btn btn-aulia rounded-0" data-bs-toggle="modal"
                                             data-bs-target="#modalEdit{{ $galeri->id }}"><i
                                                 class="bi bi-pencil-square"></i></button>
-                                        <form id="deleteForm" action="{{ url('galeri/' . $galeri->id) }}" method="post">
+                                        <form id="deleteForm" action="{{ url('/admin/galeri/' . $galeri->id) }}" method="post">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" class="btn btn-aulia rounded-0"

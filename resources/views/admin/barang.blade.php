@@ -113,7 +113,7 @@
                                         <button class="btn btn-aulia rounded-0" data-bs-toggle="modal"
                                             data-bs-target="#modalEdit{{ $barang->kd_barang }}"><i
                                                 class="bi bi-pencil-square"></i></button>
-                                        <form id="deleteForm" action="{{ url('barang/' . $barang->kd_barang) }}"
+                                        <form id="deleteForm" action="{{ url('/admin/barang/' . $barang->kd_barang) }}"
                                             method="post">
                                             @csrf
                                             @method('delete')
@@ -131,7 +131,7 @@
                                 aria-labelledby="modalEditLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <form id="editForm" action="{{ url('barang/edit/' . $barang->kd_barang) }}"
+                                        <form id="editForm" action="{{ url('/admin/barang/edit/' . $barang->kd_barang) }}"
                                             method="post">
                                             @csrf
                                             @method('put')

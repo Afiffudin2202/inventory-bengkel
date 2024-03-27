@@ -8,7 +8,7 @@
         <div class="content my-3 ">
             <div class="card p-5">
                 {{-- Form --}}
-                <form action="{{ url('pembelian/store') }}" method="post">
+                <form action="{{ url('/admin/pembelian/store') }}" method="post">
                     @csrf
                     <div class="row gap-5 justify-content-between px-5">
                         <div class="col-lg-4 ">

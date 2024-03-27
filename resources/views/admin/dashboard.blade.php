@@ -1,10 +1,18 @@
 @extends('admin.layouts.main')
+@section('chart')
+    <script src="{{ $chart->cdn() }}"></script>
+    {{ $chart->script() }}
+    {{ $konsumen->script() }}
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+@endsection
 @section('content')
     <div class="content-container px-3">
         <div class="header">
             <h3>Dashboard</h3>
         </div>
         <hr>
+        {{-- card --}}
         <div class="content-card my-3 ">
             <div class="row">
                 <div class="col-lg-3">
@@ -21,7 +29,7 @@
                             </div>
                             <div class="col-lg-9 ">
                                 <p>Barang </p>
-                                <h3>204</h3>
+                                <h3>{{ $barang->count() }}</h3>
                             </div>
                         </div>
                     </div>
@@ -42,12 +50,12 @@
                             </div>
                             <div class="col-lg-9 ">
                                 <p>Supplier</p>
-                                <h3>204</h3>
+                                <h3>{{ $supplier->count() }}</h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3" >
+                <div class="col-lg-3">
                     <div class="card-dashboard ">
                         <div class="row">
                             <div class="col-lg-3  d-flex align-items-center">
@@ -61,7 +69,7 @@
                             </div>
                             <div class="col-lg-9 ">
                                 <p>Customers</p>
-                                <h3>204</h3>
+                                <h3>{{ $customers->count() }}</h3>
                             </div>
                         </div>
                     </div>
@@ -88,52 +96,30 @@
             </div>
         </div>
         <hr>
+        {{-- chart --}}
         <div class="content-card my-3">
             <div class="row">
                 <div class="col-lg-6 mb-3">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Statistik Penjualan</h4>
+                            <h4>Statistik Pembelian dan Penjualan</h4>
                         </div>
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum et nisi sed. Consequatur
-                            dolor vel rerum hic eaque fugiat?
+                            {!! $chart->container() !!}
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 mb-3">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Statistik Pembelian</h4>
+                            <h4>Statistik Penilaian Konsumen</h4>
                         </div>
                         <div class="card-body">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum et nisi sed. Consequatur
-                            dolor vel rerum hic eaque fugiat?
+                           {!! $konsumen->container() !!}
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Statistik Pelanggan</h4>
-                        </div>
-                        <div class="card-body">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum et nisi sed. Consequatur
-                            dolor vel rerum hic eaque fugiat?
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Statistik Pembelian</h4>
-                        </div>
-                        <div class="card-body">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum et nisi sed. Consequatur
-                            dolor vel rerum hic eaque fugiat?
-                        </div>
-                    </div>
-                </div>
+             
             </div>
         </div>
     </div>

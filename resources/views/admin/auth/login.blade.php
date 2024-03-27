@@ -14,7 +14,7 @@
                                     {{ session('login_failed') }}
                                 </div>
                             @endif
-                            <form action="{{ url('login') }}" method="post">
+                            <form action="{{ url('admin/login') }}" method="post">
                                 @csrf
                                 <div class="mb-3">
                                     <div class="row">

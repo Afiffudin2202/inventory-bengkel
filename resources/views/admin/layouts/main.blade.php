@@ -118,4 +118,7 @@
     }
 </script>
 
+{{-- chart --}}
+@yield('chart')
+
 </html>

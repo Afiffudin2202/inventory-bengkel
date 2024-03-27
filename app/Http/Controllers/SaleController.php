@@ -39,6 +39,6 @@ class SaleController extends Controller
 
         Sale::create($sale);
 
-        return redirect('penjualan')->with('success', 'Transaksi penjualan berhasil');
+        return redirect('admin/penjualan')->with('success', 'Transaksi penjualan berhasil');
     }
 }

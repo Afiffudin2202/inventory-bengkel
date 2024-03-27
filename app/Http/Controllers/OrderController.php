@@ -47,6 +47,6 @@ class OrderController extends Controller
         $barang->save();
         Order::create($order);
 
-        return redirect('pembelian')->with('success', 'Berhasil input pembelian');
+        return redirect('admin/pembelian')->with('success', 'Berhasil input pembelian');
     }
 }
